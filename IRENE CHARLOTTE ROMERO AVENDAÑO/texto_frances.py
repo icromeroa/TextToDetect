@@ -33,3 +33,6 @@ tipos_unicos = set(tipo for _, tipo in resultados)
 for tipo in tipos_unicos:
     cantidad = len([1 for _, t in resultados if t == tipo])
     print(f"- {tipo}: {cantidad}")
+
+palabras = re.findall(r"[^\s]+", texto, re.UNICODE)
+print("\nCantidad de palabras:", len(palabras)) #71 palabras
